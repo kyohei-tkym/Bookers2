@@ -36,28 +36,3 @@
             <% end %>
         </div>
     </div>
-
-    <div class="col-md-8 offset-md-1">
-            <h2>Books</h2>
-                <table class="table table-hover table-inverse">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Title</th>
-                            <th>Opinion</th>
-                            <th colspan="3"></th>
-                        </tr>
-                    </thead>
-                    <% books.each do |book| %>
-                    <tbody>
-                        <tr>
-                            <td><%= attachment_image_tag book.user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg" %></td>
-                            <%= link_to book_path(book.id) do %>
-                            <td><%= book.title %></td>
-                            <% end %>
-                            <td><%= book.body %></td>
-                        </tr>
-                    </tbody>
-                    <% end %>
-                </table>
-        </div>
