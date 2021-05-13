@@ -18,9 +18,9 @@
                 </tbody>
             </table>
             <div class="row">
-                
-                    <%= link_to "", edit_user_path(user), class:"btn btn-outline-secondary btn-block fas fa-user-cog edit_user_40977" %>
-               
+
+                    <%= link_to"", edit_user_path(user), class:"btn btn-outline-secondary btn-block fas fa-user-cog edit_user_40977" %>
+
             </div>
 
             <h2 class="mt-3">New book</h2>
@@ -30,7 +30,7 @@
                         <%= f.text_field :title, class:"form-control book_title" %>
                     <div class="form-group">
                         <label>Opinion</label>
-                        <%= f.text_area :body, class:"form-control book_body" %>
+                        <%= f.text_field :body, class:"form-control book_body" %>
                     </div>
                     <div class="form-group">
                         <%= f.submit'Create Book', class:"btn btn-success" %>
