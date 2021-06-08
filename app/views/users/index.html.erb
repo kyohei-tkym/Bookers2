@@ -17,6 +17,13 @@
                             <td><%= users.name %></td>
                             <td></td>
                             <td><%= link_to"Show", "/users/#{users.id}" %></td>
+                            <td>
+                                <% if current_user.following?(users) %>
+                                  <%= link_to "Unfollow", user_relationships_path(users.id), method: :delete %>
+                                <% else %>
+                                  <%= link_to "Follow", user_relationships_path(users.id), method: :post %>
+                                <% end %>
+                            </td>
                         </tr>
                     </tbody>
                     <% end %>
